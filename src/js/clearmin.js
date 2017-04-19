@@ -30,7 +30,7 @@ window.CM = {
 	$("[data-toggle='popover']").popover();
 	$('.modal').on('show.bs.modal', function(){self.preventScroll.enable();});
 	$('.modal').on('hidden.bs.modal', function(){self.preventScroll.disable();});
-	$(window).load(function(){$('body').removeClass('cm-no-transition')});
+	$(window).on('load', function(){$('body').removeClass('cm-no-transition')});
     },
 
     config: {
@@ -43,7 +43,7 @@ window.CM = {
     fixHeight:{
         init: function()
         {
-            $(window).load(this.process);
+            $(window).on('load', this.process);
             $(window).resize(this.process);
         },
         process: function()
@@ -67,7 +67,7 @@ window.CM = {
     breadcrumb: {
         init: function(){	   	   
 	    var bc = $('.cm-navbar .breadcrumb');
-	    if(bc.size())
+	    if(bc.length)
 	    {
 		var c = bc.parent();
 		var f = function(){
@@ -75,13 +75,13 @@ window.CM = {
 		    bc.find('li.active.ellipsis').remove();
 		    bc.find('li').removeAttr('style');
 		    var i = 0;
-		    var t = bc.find('li').size() - 1;
+		    var t = bc.find('li').length - 1;
 		    while((bc.outerWidth() > (c.outerWidth() - 15)) && i < t)
 		    {
 			i++;
 			l = bc.find('li:visible:first').hide();
 		    }
-		    var n = bc.find('li:visible').size();
+		    var n = bc.find('li:visible').length;
 		    if((n > 1) && i)
 			bc.prepend('<li class="active ellipsis">&#133;</li>');
 		    else if(n == 1)
@@ -90,7 +90,7 @@ window.CM = {
 			bc.find('li:visible:first').width(c.width());
 		    }
 		};
-	    $(window).load(f);
+	    $(window).on('load', f);
 	    $(window).resize(f);
 	    }
 	}
@@ -130,7 +130,7 @@ window.CM = {
 	    var g = $('#global');
             this.l = $(document).scrollTop();
             this.c = 0;
-            if(nav.size())
+            if(nav.length)
                 $(document).scroll(function(){
 		    if(!g.hasClass('prevent-scroll'))
 		    {
@@ -274,7 +274,7 @@ window.CM = {
 			$('body').removeClass('cm-menu-toggled');
 			$.cookie('cm-menu-toggled', false, {path:'/'});
 		    }		    
-		    if(!$(this).parents('.cm-submenu').size())
+		    if(!$(this).parents('.cm-submenu').length)
 		    {
 			$('.cm-menu-items li').removeAttr('style');
 			$('.cm-submenu').removeClass('open');

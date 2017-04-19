@@ -60,7 +60,7 @@ To start using Clearmin template in a new project you can use this minimal templ
       </div>
       <footer class="cm-footer"><span class="pull-right">&copy; ACME Inc.</span></footer>
     </div>
-    <script src="assets/js/lib/jquery-2.1.3.min.js"></script>
+    <script src="assets/js/lib/jquery.min.js"></script>
     <script src="assets/js/jquery.mousewheel.min.js"></script>
     <script src="assets/js/jquery.cookie.min.js"></script>
     <script src="assets/js/fastclick.min.js"></script>
@@ -84,7 +84,7 @@ To start using Clearmin template in a new project you can use this minimal templ
 
 **Javascript files (just before `</body>`) :**
 
-*   assets/js/lib/jquery-2.1.3.min.js (required by bootstrap)
+*   assets/js/lib/jquery.min.js (required by bootstrap)
 *   assets/js/lib/jquery.mousewheel.min.js (catch some scrolling events)
 *   assets/js/lib/jquery.cookie.min.js (cookie manipulation plugin)
 *   assets/js/lib/fastclick.min.js (enhance mobile device click events)
@@ -121,7 +121,6 @@ You got two different way to restore this state :
 *   [Material Design Icons](https://github.com/google/material-design-icons) Google SVG icons
 *   [D3.js](http://d3js.org/) Data-Driven Documents
 *   [C3.js](http://c3js.org/) D3-based reusable chart library
-*   [Highlight.js](https://highlightjs.org/) Syntax highlighting for the Web
 *   [Fastclick](https://github.com/ftlabs/fastclick) Polyfill to remove click delays on browsers with touch UIs
 *   [Jquery-cookie](https://github.com/carhartl/jquery-cookie) A simple, lightweight jQuery plugin for reading, writing and deleting cookies
 *   [Jquery-mousewheel](https://github.com/jquery/jquery-mousewheel) A jQuery plugin that adds cross-browser mouse wheel support
