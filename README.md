@@ -1,4 +1,4 @@
-#Clearmin Web Template
+# Clearmin Web Template
 
 ![Clearmin template](preview.png)
 
@@ -124,5 +124,3 @@ You got two different way to restore this state :
 *   [Fastclick](https://github.com/ftlabs/fastclick) Polyfill to remove click delays on browsers with touch UIs
 *   [Jquery-cookie](https://github.com/carhartl/jquery-cookie) A simple, lightweight jQuery plugin for reading, writing and deleting cookies
 *   [Jquery-mousewheel](https://github.com/jquery/jquery-mousewheel) A jQuery plugin that adds cross-browser mouse wheel support
-
-
